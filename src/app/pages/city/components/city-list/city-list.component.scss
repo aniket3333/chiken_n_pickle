@@ -1,0 +1,74 @@
+/* Custom card styles */
+.custom-card {
+    background-color: #000009; /* Dark background color for the card */
+    color: white; /* Default text color for the card */
+    font-family: var(--font-family-sans-serif);
+}
+
+/* Centering the text */
+.custom-card .card-header {
+    padding: 20px;
+}
+
+.custom-card .text-center {
+    text-align: center;
+}
+
+/* Styling the CHIKEN text */
+.custom-card .chicken-text {
+    color: white;
+    margin-bottom: 0; /* Remove bottom margin to align with the next h1 */
+    font-family: var(--font-family-sans-serif);
+}
+
+/* Styling the N PICKLE text */
+.custom-card .pickle-text {
+    color: white;
+    margin-top: 0; /* Remove top margin to align with the previous h1 */
+    font-family: var(--font-family-sans-serif);
+}
+
+/* Yellow color for the 'N' */
+.custom-card .n-text {
+    color: yellow;
+}
+
+/* Font family variables */
+:root {
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.res-footer{
+    height: 20px;
+    background-color: #c8c9c7;
+    margin-top: 10px;
+}
+.row-margin {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+}
+.res-3col {
+    max-width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.res-btn1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    border-left: #cddb00 4px solid;
+}
+.res-btn1 a {
+    color: #ffffff;
+}
