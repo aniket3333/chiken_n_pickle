@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {  ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sport-evenet-list',
@@ -8,14 +8,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SportEvenetListComponent implements OnInit{
   city: string | null = null;
+  routeCity: string | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: Router,private router: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.city = sessionStorage.getItem('city');
+    this.city = sessionStorage.getItem('cityForUrl');
   }
   openPopUp()
   {
     
+  }
+
+  navigateTo(): void {
+    this.route.navigate([`/${this.city}/pickleball-indoor-court`]);
   }
 }

@@ -16,8 +16,9 @@ export class CityListComponent {
 
   navigateTo(city: string,urlCity:string): void {
     sessionStorage.setItem('city',city);
-    let cityy = urlCity.toLowerCase();
-    this.router.navigate([`/${cityy}`]);
+    let cityForUrl = urlCity.toLowerCase();
+    sessionStorage.setItem('cityForUrl',cityForUrl);
+    this.router.navigate([`/${cityForUrl}`]);
   }
   
   openPopUp() {
