@@ -4,83 +4,103 @@
             <div class="card">
                 <div class="card-header custom-card">
                     <div class="text-center">
-                        <h1 class="chicken-text">CHICKEN</h1>
                         <h1 class="pickle-text">
-                            <span class="n-text">N</span> PICKLE
+                            PICKLE PLAYS
                         </h1>
                     </div>
                 </div>
-                <div class="card-body border-bottom">
-                    <div class="row text-center">
+
+                <div class="card-body border-bottom" style="height: 60vh;">
+                    <div class="row text-center" style="font-weight: 800;">
                         <div>RESERVATIONS</div>
                     </div>
                     <div class="row text-center mt-2">
                         <span>Select a location to begin.</span>
                     </div>
                     <div class="container-lg">
-                        <div class="row row-margin justify-content-center">
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/north-kansas-city/">NORTH KANSAS CITY</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/san-antonio/">SAN ANTONIO</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/wichita/">WICHITA</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-margin justify-content-center">
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/oklahoma-city/">OKLAHOMA CITY</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/overland-park/">OVERLAND PARK</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/grand-prairie/">GRAND PRAIRIE</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-margin justify-content-center">
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/grapevine/">GRAPEVINE, TX</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/glendale-az/">GLENDALE, AZ</a>
-                                </div>
-                            </div>
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/st-charles-mo/">ST CHARLES, MO</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-margin justify-content-center">
-                            <div class="col-sm res-3col">
-                                <div class="res-btn1 box h-100 d-flex justify-content-center flex-column">
-                                    <a href="/webster-tx/">WEBSTER, TX</a>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- app.component.html or relevant component HTML -->
+<div class="row row-margin justify-content-center">
+    <div class="col-sm res-3col">
+      <div class="res-btn1 box h-100 d-flex justify-content-center flex-column" (click)="navigateTo('OKLAHOMA CITY')">
+        <span>OKLAHOMA CITY</span>
+      </div>
+    </div>
+    <div class="col-sm res-3col">
+      <div class="res-btn1 box h-100 d-flex justify-content-center flex-column" (click)="navigateTo('SAN ANTONIO')">
+        <span>SAN ANTONIO</span>
+      </div>
+    </div>
+    <div class="col-sm res-3col">
+      <div class="res-btn1 box h-100 d-flex justify-content-center flex-column" (click)="navigateTo('WICHITA')">
+        <span>WICHITA</span>
+      </div>
+    </div>
+  </div>
+  
                     </div>
+
                 </div>
-                <div class="card-footer">
-                    <!-- Footer content here -->
+                <div class="card-body border-bottom">
+                    <!-- collapse.component.html -->
+                   <!-- collapse.component.html -->
+<!-- collapse.component.html -->
+<div class="container-lg">
+    <ngb-accordion>
+      <ngb-panel title="Rates">
+        <!-- <ng-template ngbPanelTitle>
+          <button type="button" class="btn-link w-100">
+            Rates <i class="fas fa-plus"></i>
+          </button>
+        </ng-template> -->
+        <ng-template ngbPanelContent>
+          <div class="collapse-content">
+            <div class="loc-rates">
+              <p>
+                <span>
+                  Mon-Fri 8am-5pm: $30 per hour<br>
+                  Mon-Fri 5pm-close: $40 per hour<br>
+                  All day Weekends: $45 per hour
+                </span>
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-panel>
+  
+      <ngb-panel title="Cancellation Policy">
+        <!-- <ng-template ngbPanelTitle>
+          <button type="button" class="btn-link w-100">
+            Cancellation Policy <i class="fas fa-plus"></i>
+          </button>
+        </ng-template> -->
+        <ng-template ngbPanelContent>
+          <div class="collapse-content">
+            <div class="loc-policy">
+              <p>
+                <span>
+                  To receive 100% refund you must cancel your court reservation 24 hours in advance. After 24 hours, you can receive a 50% refund. To cancel, please call the restaurant.
+                </span>
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+  
+  
+  
+
                 </div>
+                <div class="card-footer custom-card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span>© 2024 Sdaemon Infotech Pvt. Ltd. All Rights Reserved.</span>
+                      <div>
+                        <a href="#" class="footer-link">Privacy</a> |
+                        <a href="#" class="footer-link">Terms</a>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

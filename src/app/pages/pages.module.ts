@@ -10,7 +10,7 @@ import { ProviderList } from "./pages-provider-registrar";
     CommonModule,
     FormsModule,
     PagesRoutingModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProviderList],
 })
