@@ -9,11 +9,13 @@ import {  ActivatedRoute, Router } from '@angular/router';
 export class SportEvenetListComponent implements OnInit{
   city: string | null = null;
   routeCity: string | null = null;
+  actualcity: string|null=null;
 
   constructor(private route: Router,private router: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.city = sessionStorage.getItem('cityForUrl');
+    this.actualcity = sessionStorage.getItem('city');
   }
   openPopUp()
   {
