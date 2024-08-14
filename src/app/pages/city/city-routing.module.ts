@@ -6,11 +6,6 @@ const routes: Routes = [
         path: '',
         component: CityListComponent
     },
-
-    {
-        path: ':city',
-        loadChildren: () => import('../sports-events/sports-events.module').then(m => m.SportEventsModule),
-      }
 ];
 
 
