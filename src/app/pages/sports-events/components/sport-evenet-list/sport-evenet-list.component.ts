@@ -12,6 +12,6 @@ export class SportEvenetListComponent implements OnInit{
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.city = this.route.snapshot.paramMap.get('city');
+    this.city = sessionStorage.getItem('city');
   }
 }

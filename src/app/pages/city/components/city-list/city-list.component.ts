@@ -10,8 +10,9 @@ export class CityListComponent {
   //#region
   constructor(private router: Router) {}
 
-  navigateTo(city: string): void {
-    let cityy = city.toLowerCase();
+  navigateTo(city: string,urlCity:string): void {
+    sessionStorage.setItem('city',city);
+    let cityy = urlCity.toLowerCase();
     this.router.navigate([`/${cityy}`]);
   }
 }
