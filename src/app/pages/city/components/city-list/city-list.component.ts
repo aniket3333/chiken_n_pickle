@@ -11,7 +11,7 @@ export class CityListComponent {
   constructor(private router: Router) {}
 
   navigateTo(city: string): void {
-    sessionStorage.setItem('selectedCity', city);
-    this.router.navigate(['/choose-location/sport-events']);
+    let cityy = city.toLowerCase();
+    this.router.navigate([`/${cityy}`]);
   }
 }

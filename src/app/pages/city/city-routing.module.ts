@@ -8,7 +8,7 @@ const routes: Routes = [
     },
 
     {
-        path: 'sport-events',
+        path: ':city',
         loadChildren: () => import('../sports-events/sports-events.module').then(m => m.SportEventsModule),
       }
 ];

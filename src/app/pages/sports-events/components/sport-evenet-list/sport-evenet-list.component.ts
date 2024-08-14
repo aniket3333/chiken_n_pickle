@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sport-evenet-list',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sport-evenet-list.component.scss']
 })
 export class SportEvenetListComponent implements OnInit{
-  selectedCity: string | null = null;
+  city: string | null = null;
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.selectedCity = sessionStorage.getItem('selectedCity');
+    this.city = this.route.snapshot.paramMap.get('city');
   }
 }
