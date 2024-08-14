@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService, ModalOptions } from "ngx-bootstrap/modal";
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions/terms-conditions.component';
 
 @Component({
   selector: 'app-city-list',
@@ -8,11 +10,22 @@ import { Router } from '@angular/router';
 })
 export class CityListComponent {
   //#region
-  constructor(private router: Router) {}
+  bsModalRef: BsModalRef;
+
+  constructor(private router: Router,private _modalService: BsModalService) {}
 
   navigateTo(city: string,urlCity:string): void {
     sessionStorage.setItem('city',city);
     let cityy = urlCity.toLowerCase();
     this.router.navigate([`/${cityy}`]);
+  }
+  
+  openPopUp() {
+    const options: ModalOptions = {
+      backdrop: 'static',
+      class: 'modal-xl',
+      providers: []
+    };
+    this.bsModalRef =  this._modalService.show(TermsConditionsComponent, options);
   }
 }

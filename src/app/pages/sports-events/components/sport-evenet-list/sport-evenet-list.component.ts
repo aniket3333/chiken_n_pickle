@@ -14,4 +14,8 @@ export class SportEvenetListComponent implements OnInit{
   ngOnInit(): void {
     this.city = sessionStorage.getItem('city');
   }
+  openPopUp()
+  {
+    
+  }
 }

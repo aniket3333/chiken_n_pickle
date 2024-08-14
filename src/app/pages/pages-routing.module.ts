@@ -10,7 +10,7 @@ const routes: Routes = [
     path: ':city',
     loadChildren: () => import('./sports-events/sports-events.module').then(m => m.SportEventsModule),
   },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'choose-location' },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

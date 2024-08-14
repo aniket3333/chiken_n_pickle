@@ -78,62 +78,6 @@
     text-decoration: none;
 }
 
-//colapse css
-/* collapse.component.css */
-
-/* General container styling */
-.container-lg {
-    margin-top: 20px;
-    padding: 0 15px;
+  .pointer{
+    cursor: pointer;
   }
-  
-  /* Styling for the accordion panel headers */
-  .ngb-panel-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  /* Styling for the button within the panel header */
-  .btn-link {
-    text-align: left;
-    font-size: 1rem;
-    color: #007bff;
-    background-color: transparent;
-    border: none;
-    padding: 10px 0;
-    width: 100%;
-  }
-  
-  /* Adjust button color and icon positioning */
-  .btn-link .fas {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Styling for the accordion panel content */
-  .collapse-content {
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-  }
-  
-  /* Add some padding to the content */
-  .loc-rates,
-  .loc-policy {
-    padding: 15px;
-  }
-  
-  /* Adjust the icon rotation when the panel is expanded */
-  .ngb-panel.collapsing .btn-link .fas.fa-plus {
-    transform: rotate(45deg);
-  }
-  
-  .ngb-panel .btn-link .fas.fa-times {
-    transform: rotate(45deg);
-  }
-  
-  /* Optional: Change the background color of the button on hover */
-  .btn-link:hover {
-    background-color: #f8f9fa;
-    color: #0056b3;
-  }
-  
